@@ -1,0 +1,26 @@
+{
+  "name": "UserManagmentSystem",
+  "version": "1.0.0",
+  "description": "UserManagmentSystem",
+  "main": "UserManagmentSystem",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.0",
+    "mongodb": "^1.4.38",
+    "mongoskin": "^1.4.13",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.0.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.4.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17"
+  },
+  "author": "sallapcjoseph",
+  "license": "ISC"
+}

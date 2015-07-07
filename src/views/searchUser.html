@@ -1,0 +1,42 @@
+<div>
+	<div>
+		<input type="text" ng-model="vmSearchUserctrl.firstName" placeholder="Search by First Name"><button ng-click="vmSearchUserctrl.getUserByFirstName();">Search</button>
+		<span ng-bind="::vmSearchUserctrl.message" class="error"></span>
+		<hr>
+		<button ng-click="vmSearchUserctrl.getUsers();">Get All Users</button>
+		<table ng-show="vmSearchUserctrl.savedUsers.length > 0">
+			<tr>
+				<th>Name</th>
+				<th>Birthday</th>
+				<th>Phone</th>
+				<th>Address</th>
+				<th>Actions</th>
+			</tr>
+			<tr ng-repeat="user in vmSearchUserctrl.savedUsers">
+				<td>{{user.firstName}}  {{user.lastName}}</td>
+				<td>{{user.birthday | date:'MM/dd/yyyy @ h:mma'}}</td>
+				<td>{{user.phone}}</td>
+				<td>{{user.address}}</td>
+				<th><a href="" ng-click="vmSearchUserctrl.updateUserObject($index);">Update</a>&nbsp;/&nbsp;<a href="" ng-click="vmSearchUserctrl.removeUser(user._id);">Delete</a></th>
+			</tr>
+		</table>
+	</div>
+	<hr>
+	<button ng-click="vmSearchUserctrl.addUser();" ng-show="vmSearchUserctrl.isAddAction;">Add User</button>
+	<button ng-click="vmSearchUserctrl.updateUser();" ng-show="!vmSearchUserctrl.isAddAction;">Update User</button>
+	<form name="myform">
+		<table>
+			<tr>
+				<td>First Name: <input type="text" require="true" ng-model="vmSearchUserctrl.user.firstName"></td>
+			</tr>
+				<td>Last Name: <input type="text" require="true" ng-model="vmSearchUserctrl.user.lastName"></td>
+			</tr>
+				<td>Birthday: <input type="date" require="true" ng-model="vmSearchUserctrl.user.birthday"></td>
+			</tr>
+				<td>Phone: <input type="number" require="true" ng-model="vmSearchUserctrl.user.phone"></td>
+			</tr>
+				<td>Address: <input type="text" require="true" ng-model="vmSearchUserctrl.user.address"></td>
+			</tr>
+		</table>
+	</form>
+</div>

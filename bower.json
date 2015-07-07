@@ -1,0 +1,25 @@
+{
+  "name": "UserManagmentSystem",
+  "version": "0.0.0",
+  "authors": [
+    "sallapcjoseph@yahoo.com"
+  ],
+  "description": "UserManagmentSystem",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1",
+    "angular-route": "~1.4.1"
+  },
+  "devDependencies": {
+    "qunit": "~1.18.0",
+    "angular-mocks": "~1.4.1"
+  }
+}
